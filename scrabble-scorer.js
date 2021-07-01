@@ -69,6 +69,7 @@ let vowelBonusScore = function (word) {
 
 let scrabbleScore = function (word) {
    let sumScore = 0
+   word = word.toLowerCase()
 
    for (let i = 0; i < word.length; i++) {
       sumScore += newPointStructure[word[i]]
@@ -84,7 +85,7 @@ const scoringAlgorithms = [
       scoringFunction: simpleScore
    },
    {
-      name: "Bonus Vowels",
+      name: "BosimpleScore Vowels",
       description: "Vowels are 3 pts, consonants are 1 pt.",
       scoringFunction: vowelBonusScore
    },
