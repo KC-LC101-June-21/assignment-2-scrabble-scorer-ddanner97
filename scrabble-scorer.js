@@ -114,14 +114,14 @@ function transform(oldObject) {
 
    for (keys in oldObject) {
 
-      for (let i = 0; i < oldObject[keys].length; i++) {
+    for (let i = 0; i < oldObject[keys].length; i++) {
          newObject[oldObject[keys][i].toLowerCase()] = Number(keys)
-      }
-   }
+    }
+  }
 
-   newObject[' '] = 10
+  //newObject[' '] = 10
 
-   return newObject
+  return newObject
 };
 
 let newPointStructure = transform(oldPointStructure);
